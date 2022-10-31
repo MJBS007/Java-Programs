@@ -1,0 +1,51 @@
+public class SeperateStrings {
+
+	public static void main(String[] args) {
+		// Declare and Initialize String
+		String str = "hello12!@#@90";
+		
+		// Empty String to store Strings seperately
+		String s1 = "";
+		// Empty String to store digits seperately
+		String s2 = "";
+		// Empty String to store Special characters seperately
+		String s3 = "";
+		
+    //Used for loop for the movement of the position of the given String
+		for(int i=0; i<str.length(); i++) 
+		{
+			char ch = str.charAt(i);
+		//For the seperation of Alphabetic character	
+			if (Character.isAlphabetic(ch))
+			{
+				s1=s1+ch;
+			}
+      //For the seperation of Digits character
+			else if (Character.isDigit(ch))
+			{
+				s2=s2+ch;
+			}
+      //For the seperation of Special character
+			else
+			{
+				s3=s3+ch;
+			}
+		}
+    
+    //Given String
+		System.out.println(str);
+    
+    //Seperated and segregated 
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+	
+    
+    //Seperated Characters with Displaying their length
+		System.out.println("Total Alphabets "+str.length());
+		System.out.println("Total Alphabets "+s1.length());
+		System.out.println("Total Alphabets "+s2.length());
+		System.out.println("Total Alphabets "+s3.length());
+	}
+
+}
